@@ -247,33 +247,9 @@ body
 }
 );
 </script>
-<!-- <script>
-// locate the button and set a destination url for it
-let destination = "https://google.com";
-var ctaOne = document.getElementById("ctaOne");
-var ctaTwo = document.getElementById("ctaTwo");
-var ctaThree = document.getElementById("remindMeLater");
-
-ctaOne.addEventListener("click", function openCTA()
-{
-  //open destination in new window
-  window.open(destination, "_blank");
-});
-ctaTwo.addEventListener("click", function openCTA()
-{
-  //open destination in new window
-  window.open(destination, "_blank");
-});
-// Initialize Swiper
-var swiper = new Swiper('.swiper-container',
-{
-  pagination:
-  {
-    el: '.swiper-pagination',
-  },
-});
-</script> -->
 <script>
+
+document.body.requestFullscreen();
 //initialize swiper
 var swiper = new Swiper('.swiper-container',
 {
