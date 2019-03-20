@@ -45,9 +45,11 @@ function onUAReady()
    //set url destinations for CTAs
    let buttonOne = 'buttonOne';
    let buttonTwo = 'buttonTwo';
+   var svgToPrint;
    let destinationOne = 'bmw://connected/pnsroute';
    var ctaOne = document.getElementById("ctaOne");
    var ctaTwo = document.getElementById("ctaTwo");
+   var swap = document.getElementById("swap");
    var ctaThree = document.getElementById("remindMeLater");
    var language = window.navigator.language;
 
@@ -79,7 +81,7 @@ function onUAReady()
         return true;
       })
     });
-    
+
    ctaThree.disabled = false;
    ctaThree.addEventListener("click", function(event)
    {
