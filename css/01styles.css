@@ -1,0 +1,258 @@
+:root
+{
+  --background_color_hexString: #000000;
+}
+/* @font-face
+{
+  font-family: "BMWTA_LG";
+  src: url("BMWTALG_3_000.ttf");
+} */
+html, body
+{
+  position: relative;
+  height: 100%;
+  max-height: 100%;
+  background-color: var(--background_color_hexString);
+  /* font-family: "BMWTA_LG", sans-serif !important; */
+  font-weight:normal;
+  font-style:normal;
+
+}
+p
+{
+  color: #cdcdcd;
+  font-size: 18px;
+}
+body
+{
+  margin: 0;
+}
+.swiper-container
+{
+  width: 100%;
+  height: 100%;
+}
+.imageDiv
+{
+  width: 100%;
+  height: 44.5%;
+  background-color: #1a1c1d;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+}
+.iconDiv
+{
+  width: 67px;
+  height: 67px;
+  background-color: #1a1c1d;
+  background-image: url("errorIcon.svg");
+  background-position: center;
+  background-size: contain;
+  position: fixed;
+  z-index: 90;
+  top: 12%;
+}
+#testDiv
+{
+  background-size: contain;
+}
+.swiper-slide
+{
+  text-align: left;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  background-color: #1a1c1d;
+}
+.swiper-pagination-bullet
+{
+  background: #fff !important;
+}
+.bmwButtonContainer
+{
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  padding-right: 15px !important;
+  padding-left: 15px !important;
+  z-index: 10;
+}
+.bmwButtonContainer button
+{
+  width: 100%;
+  height: 50px;
+  border: none;
+  display: block;
+}
+.buttonText
+{
+  padding-top: 5px;
+}
+.singleButton
+{
+  top: 35%;
+  z-index: 0;
+}
+.singleButton button, .groupButton button
+{
+  background-color: #404648;
+}
+.groupButton
+{
+  top: 35%;
+  z-index: 0;
+}
+.textBoxContainer, .textBoxContainerNoImage, .errorTextBoxContainer
+{
+  display: inline-block;
+  position: fixed;
+  width: 100%;
+  padding-bottom: 100%;
+  vertical-align: middle;
+  overflow: hidden !important;
+  height: 100px;
+}
+.textBoxContainer
+{
+  top: 50%;
+}
+.textBoxContainerNoImage
+{
+  top: 8%;
+}
+.errorTextBoxContainer
+{
+  top: 23%;
+}
+.textBox
+{
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+  right: 0;
+  width: 92%;
+  margin: 0 auto;
+  z-index: 10;
+}
+
+/* checkboxes */
+/* The container */
+.container
+{
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checks
+{
+  position: absolute;
+  z-index: 99;
+  left: 15px;
+  top: 30%;
+}
+/* Hide the browser's default checkbox */
+.container input
+{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+/* Create a custom checkbox */
+.checkmark
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border: solid 2px #fff;
+}
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark
+{
+  background-color: transparent;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after
+{
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after
+{
+  display: block;
+}
+/* Style the checkmark/indicator */
+.container .checkmark:after
+{
+  left: 13px;
+  top: -7px;
+  width: 5px;
+  height: 18px;
+  border: solid #FF5500;
+  border-width: 0 3.5px 3.5px 0;
+  -webkit-transform: rotate(41deg);
+  -ms-transform: rotate(41deg);
+  transform: rotate(41deg);
+}
+.secondaryButton
+{
+  background-color: transparent !important;
+  margin-top: 5px;
+}
+#slideOnee, #slideTwoo
+{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+  /* Render special image for iPhone X dimension */
+@media only screen and (device-width : 375px) and (device-height : 812px) and (-webkit-device-pixel-ratio : 3)
+{
+  #slideOne
+  {
+    background-size: auto 40%;
+  }
+  #slideTwo
+  {
+    background-size: auto 40%;
+  }
+  .textBoxContainer
+  {
+    top: 50%;
+  }
+  .singleButton
+  {
+    top: 42%;
+  }
+  .groupButton
+  {
+    top: 39%;
+  }
+}
