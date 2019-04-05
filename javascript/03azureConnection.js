@@ -97,16 +97,27 @@ function refreshBlobList()
                    }
                    for (var i = 0; i < imageDiv.length; i++)
                    {
-
                      for (var i = 0, blob; blob = results.entries[i]; i++)
                      {
-                        blobURL = blobUri + '/' + container + '/' + blob.name + sas;
-                        console.log(blobURL);
+                        if (document.title == "BMW Modal Window | English")
+                        {
+                          blob = results.entries[0];
+                          blobURL = blobUri + '/' + container + '/' + blob.name + sas;
 
-                          imageDiv[i].style.backgroundImage = "url(" + blobURL + ")";
-                          imageDiv[i].style.backgroundRepeat = "no-repeat";
-                          imageDiv[i].style.backgroundPosition = "center";
-                          imageDiv[i].style.backgroundSize = "cover";
+                          imageDiv[0].style.backgroundImage = "url(" + blobURL + ")";
+                          imageDiv[0].style.backgroundRepeat = "no-repeat";
+                          imageDiv[0].style.backgroundPosition = "center";
+                          imageDiv[0].style.backgroundSize = "cover";
+                        }
+                        else if (document.title == "BMW Modal Window | German")
+                        {
+                          blob = results.entries[1];
+                          blobURL = blobUri + '/' + container + '/' + blob.name + sas;
+                          imageDiv[0].style.backgroundImage = "url(" + blobURL + ")";
+                          imageDiv[0].style.backgroundRepeat = "no-repeat";
+                          imageDiv[0].style.backgroundPosition = "center";
+                          imageDiv[0].style.backgroundSize = "cover";
+                        }
 
                      }
                   }
@@ -149,3 +160,4 @@ function embedBlob(blob)
 refreshContainer();
 viewContainer("assets");
 refreshBlobList();
+console.log(document.title);
